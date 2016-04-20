@@ -6,7 +6,7 @@
 		<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 		<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>	
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
-		<script src = "controllers.js" type = "text/javascriipt"></script>
+		<script src = "controllers.js" type = "text/javascript"></script>
 	</head>
 	<body>
 		<div id = "mainPanel" ng-controller = "madLibCtrl as vm">
@@ -26,32 +26,30 @@
 					<div>
 						<ul class = "inputLists">
 							<li><input type = "text" placeholder = "Male Name" ng-model = "vm.maleName"/></li>
-<!-- 							<li><input type = "text" placeholder = "Job Title" ng-model = "jobTitle"/></li>
-							<li><input type = "text" placeholder = "Tedious Task" ng-model = "tedTask"/></li> -->
-						</ul>
-					</div>
-<!-- 					<div>
-						<ul class = "inputLists">
-							<li><input type = "text" placeholder = "Dirty Task" ng-model = "dirtyTask"/></li>
-							<li><input type = "text" placeholder = "Celebrity" ng-model = "celeb" /></li>
-							<li><input type = "text" placeholder = "Useless Skill" ng-model = "uselessSkill"/></li>
+							<li><input type = "text" placeholder = "Job Title" ng-model = "vm.jobTitle"/></li>
+							<li><input type = "text" placeholder = "Tedious Task" ng-model = "vm.tedTask"/></li>
 						</ul>
 					</div>
 					<div>
 						<ul class = "inputLists">
-							<li><input type = "text" placeholder = "Obnoxious Celebrity" ng-model = "obCeleb"/></li>
-							<li><input type = "text" placeholder = "Huge Number" ng-model = "hugeNum"/></li>
-							<li><input type = "text" placeholder = "Adjective" ng-model = "adj"/></li>
+							<li><input type = "text" placeholder = "Dirty Task" ng-model = "vm.dirtyTask"/></li>
+							<li><input type = "text" placeholder = "Celebrity" ng-model = "vm.celeb" /></li>
+							<li><input type = "text" placeholder = "Useless Skill" ng-model = "vm.uselessSkill"/></li>
 						</ul>
-					</div> -->
+					</div>
+					<div>
+						<ul class = "inputLists">
+							<li><input type = "text" placeholder = "Obnoxious Celebrity" ng-model = "vm.obCeleb"/></li>
+							<li><input type = "text" placeholder = "Huge Number" ng-model = "vm.hugeNum"/></li>
+							<li><input type = "text" placeholder = "Adjective" ng-model = "vm.adj"/></li>
+						</ul>
+					</div>
 				</div>
 				<input id = "submitBtn" type = "submit" value = "Apply Words" ng-click = "vm.applyWords()"/>
 			</div>
 			<div id = "madLipOutput">
-				<p>{{vm.maleNameOutput}} is cool.</p>
-				<!-- <p>{{vm.maleNameOutput}} was a {{jobTitle}} who loved technology. Although she loved parts of her job, she absolutely hated  {{tedTask}} and {{dirtyTask}}. So, {{maleName}} met with her life mentor {{celeb}} who told her to learn how to {{uselessSkill}} with Thinkful. Thinkful didn't offer a course on {{uselessSkill}} so she studied programming instead.</p> 
- 
-				<p>What a great decision! With her new skills, {{maleName}} built a(n) {{adj}} robot named {{obCeleb}} that not only loved {{dirtyTask}} but did it {{hugeNum}} faster.</p>  -->
+				<p>{{vm.maleNameOutput}} was a {{vm.jobTitleOutput}} who loved technology. Although he loved parts of his job, he absolutely hated  {{vm.tedTaskOutput}} and {{vm.dirtyTaskOutput}}. So, {{vm.maleNameOutput}} met with his life mentor {{vm.celebOutput}} who told him to learn how to {{vm.uselessSkillOutput}} with Thinkful. Thinkful didn't offer a course on {{vm.uselessSkillOutput}} so he studied programming instead.</p> 
+				<p>What a great decision! With his new skills, {{vm.maleNameOutput}} built a(n) {{vm.adjOutput}} robot named {{vm.obCelebOutput}} that not only loved {{vm.dirtyTaskOutput}} but did it {{vm.hugeNumOutput}} faster.</p> 
 			</div>
 		</div>
 	</body>
