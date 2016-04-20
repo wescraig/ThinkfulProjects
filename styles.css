@@ -1,0 +1,74 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+
+#mainPanel{
+	margin: 5% auto;
+	width: 60em;
+    height: 800px;
+    /*position: absolute;*/
+    border: 3px solid black;
+}
+
+#madLibHeader{
+	width: 100%;
+    display: flex;
+    border-bottom: 3px solid black;
+    padding: 0;
+    height: 179px;
+}
+
+#madLibHeaderInner{
+	padding-top: 3%;
+}
+
+#innerText{
+	margin-left: 6em;
+    margin-top: 0;
+    position: relative;
+    font-size: 40px;
+
+}
+
+#madLibInputs{
+	border-bottom: 3px solid black;
+	width: 100%;
+}
+
+.inputLists{
+	list-style-type: none;
+}
+
+.inputLists li{
+	margin: 6% 0 0 0;
+}
+
+.inputLists li input{
+	text-align: center;
+	font-size: 15px;
+
+}
+
+#inputTitle{
+	font-size: 2em;
+	font-weight: bold;
+	margin-left: 4%;
+	margin-bottom: 2%;
+}
+
+#mLInputsInner{
+	display: flex;
+    margin: 0 0 2% 0;
+    width: 100%;
+    padding-left: 9%;
+}
+
+#madLipOutput{
+	padding: 8% 4% 4% 4%;
+	font-size: 20px;
+}
+
+#submitBtn{
+	margin: 0 0 2% 53em;
+}

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en" ng-app = "madLibApp">
+	<head>
+		<title>ngMadLibs Webapp</title>
+		<link rel="stylesheet" type = "text/css" href = "styles.css"/>
+		<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+		<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>	
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+		<script src = "controllers.js" type = "text/javascriipt"></script>
+	</head>
+	<body>
+		<div id = "mainPanel" ng-controller = "madLibCtrl as vm">
+			<div id = "madLibHeader">
+				<div>
+					<img src = "imgs/mad-lib-happy-face.png" style = "width: 175px; height: 175px; border: 3px solid black;"/>
+				</div>
+				<div id = "madLibHeaderInner">
+					<img src = "imgs/ng-mad-libs-logo.png" style = "height: 75px; margin-left: 45%;"/>
+					<h2 id = "innerText">Automate this!</h2>
+				</div>
+			</div>
+			<div id = "madLibInputs">
+				<p id = "inputTitle">Provide the following words:</p>
+
+				<div id = "mLInputsInner">
+					<div>
+						<ul class = "inputLists">
+							<li><input type = "text" placeholder = "Male Name" ng-model = "vm.maleName"/></li>
+<!-- 							<li><input type = "text" placeholder = "Job Title" ng-model = "jobTitle"/></li>
+							<li><input type = "text" placeholder = "Tedious Task" ng-model = "tedTask"/></li> -->
+						</ul>
+					</div>
+<!-- 					<div>
+						<ul class = "inputLists">
+							<li><input type = "text" placeholder = "Dirty Task" ng-model = "dirtyTask"/></li>
+							<li><input type = "text" placeholder = "Celebrity" ng-model = "celeb" /></li>
+							<li><input type = "text" placeholder = "Useless Skill" ng-model = "uselessSkill"/></li>
+						</ul>
+					</div>
+					<div>
+						<ul class = "inputLists">
+							<li><input type = "text" placeholder = "Obnoxious Celebrity" ng-model = "obCeleb"/></li>
+							<li><input type = "text" placeholder = "Huge Number" ng-model = "hugeNum"/></li>
+							<li><input type = "text" placeholder = "Adjective" ng-model = "adj"/></li>
+						</ul>
+					</div> -->
+				</div>
+				<input id = "submitBtn" type = "submit" value = "Apply Words" ng-click = "vm.applyWords()"/>
+			</div>
+			<div id = "madLipOutput">
+				<p>{{vm.maleNameOutput}} is cool.</p>
+				<!-- <p>{{vm.maleNameOutput}} was a {{jobTitle}} who loved technology. Although she loved parts of her job, she absolutely hated  {{tedTask}} and {{dirtyTask}}. So, {{maleName}} met with her life mentor {{celeb}} who told her to learn how to {{uselessSkill}} with Thinkful. Thinkful didn't offer a course on {{uselessSkill}} so she studied programming instead.</p> 
+ 
+				<p>What a great decision! With her new skills, {{maleName}} built a(n) {{adj}} robot named {{obCeleb}} that not only loved {{dirtyTask}} but did it {{hugeNum}} faster.</p>  -->
+			</div>
+		</div>
+	</body>
+</html>
