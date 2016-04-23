@@ -1,3 +1,8 @@
+@keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
 body{
 	margin: 0;
 	padding: 0;
@@ -6,11 +11,15 @@ body{
 #mainPanel{
 	margin: 5% auto;
 	width: 60em;
-    height: 800px;
+    height: 32em;
     /*position: absolute;*/
     border: 3px solid black;
+    transition: height 0.5s;
 }
 
+#mainPanel.isNotValid{
+	height: 38em;
+}
 #madLibHeader{
 	width: 100%;
     display: flex;
@@ -32,7 +41,6 @@ body{
 }
 
 #madLibInputs{
-	border-bottom: 3px solid black;
 	width: 100%;
 }
 
@@ -72,3 +80,31 @@ body{
 #submitBtn{
 	margin: 0 0 2% 53em;
 }
+
+.errorMsg{
+	background: maroon;
+	color: white;
+	padding: 5px;
+	margin-top: 15px;
+	border-radius: 5px;
+	position: relative;
+	animation: fadeIn ease-in 0.6s;
+}
+
+.errorMsg:after, .errorMsg:before{
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.errorMsg:after{
+	border-bottom-color: maroon;
+	border-width: 6px;
+	margin-left: -80px;
+}
+
