@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('madLibApp', ['ngMessages'])
+angular.module('madLibApp', ['ngMessages', 'ngAnimate'])
 
 .controller('madLibCtrl', function(){
 	
